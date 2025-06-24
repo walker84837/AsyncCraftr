@@ -7,6 +7,14 @@ group = "org.winlogon"
 version = "0.1.0"
 
 repositories {
+    maven {
+        name = "papermc"
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+        content {
+            includeModule("io.papermc.paper", "paper-api")
+            includeModule("net.md-5", "bungeecord-chat")
+        }
+    }
     mavenCentral()
 }
 
