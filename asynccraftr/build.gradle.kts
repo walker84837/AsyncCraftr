@@ -14,9 +14,6 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation(libs.junit.jupiter)
-    testImplementation("net.kyori:adventure-api:4.21.0")
-    testImplementation("net.kyori:adventure-text-minimessage:4.21.0")
 }
 
 java {
