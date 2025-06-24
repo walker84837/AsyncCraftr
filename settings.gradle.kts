@@ -6,3 +6,4 @@
  */
 
 rootProject.name = "AsyncCraftr"
+include("asynccraftr")
