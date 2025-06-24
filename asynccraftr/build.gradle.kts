@@ -1,3 +1,5 @@
+import org.gradle.external.javadoc.StandardJavadocDocletOptions
+
 plugins {
     `java-library`
     `maven-publish`
@@ -26,7 +28,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.21.6-R0.1-SNAPSHOT")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
@@ -40,6 +42,13 @@ java {
 tasks.named<Test>("test") {
     useJUnitPlatform()
 }
+
+tasks.withType<Javadoc>().configureEach {
+    (options as? StandardJavadocDocletOptions)?.let { opts ->
+        opts.links("https://jd.papermc.io/paper/1.21.6")
+    }
+}
+
 
 publishing {
     publications {
