@@ -15,6 +15,13 @@ repositories {
             includeModule("net.md-5", "bungeecord-chat")
         }
     }
+    maven {
+        name = "minecraft"
+        url = uri("https://libraries.minecraft.net")
+        content {
+            includeModule("com.mojang", "brigadier")
+        }
+    }
     mavenCentral()
 }
 
